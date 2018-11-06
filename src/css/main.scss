@@ -103,11 +103,11 @@
             width: 200vw;
             height: 1px;
             margin-left: -100vw;
-            transform: translateY(-1px);
+            transform: translateY(-1px); 
             background-image: linear-gradient(to right, #dcdcdc 50%, transparent 0%);
             background-size: 10px 1px;
             background-position: left top;
-            background-repeat: repeat-x;
+            background-repeat: repeat-x; 
         }
 
         @include mq($until: tablet) {
@@ -119,11 +119,21 @@
 
 
     .element--immersive {
-        width: 1300px;
-        margin-left: -260px;
+        @include mq(tablet) {
+            width: 620px;
+        }
+
+        @include mq(wide) {
+            width: 1300px;
+            margin-left: -260px;
+        } 
     }
 
     .element--showcase {
+        @include mq(tablet) {
+            width: 620px;
+        }
+        
         @include mq(desktop) {
             width: 860px !important;
             margin-left: 0 !important;
@@ -131,6 +141,13 @@
     }
 
     .element-interactive {
-        margin-bottom: 48px !important; 
+        margin-bottom: 0 !important;
+        padding-bottom: 48px !important;
+        padding-top: 12px !important;
+        margin-top: 0 !important;
     }
+  }
+
+  .content__main {
+      overflow: hidden !important;
   }

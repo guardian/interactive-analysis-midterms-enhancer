@@ -43,8 +43,12 @@
         box-shadow: 5px 0 0 #121212, -10px 0 0 #121212;
         color: #fff;
         @include fs-header(4);
-        font-size: 52px;
+        font-size: 44px;
         line-height: 1.22;
+
+        @include mq($until: tablet) {
+            font-size: 36px;
+        }
     }
     .content__standfirst {
         font-size: 1rem;
@@ -86,8 +90,8 @@
         box-shadow: 5px 0 0 #eaeaea, -10px 0 0 #eaeaea;
         color: #000;
         @include fs-header(5);
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 28px;
+        line-height: 36px;
         padding-bottom: .1em;
         
         display: inline;
@@ -104,6 +108,11 @@
             background-size: 10px 1px;
             background-position: left top;
             background-repeat: repeat-x;
+        }
+
+        @include mq($until: tablet) {
+            font-size: 28px;
+            line-height: 36px;
         }
     }
 
